@@ -1,0 +1,53 @@
+.navbar-primary {
+    box-shadow: 1px 3px 5px #e7e7e7;
+    justify-content: space-between;
+    padding: 10px 10px;
+    text-align: center;
+    max-width: 100%;
+    margin: auto;
+    text-align: center;
+} 
+ul {
+    list-style: none;
+    display: flex;
+    width: 100%;
+    margin: auto;
+    padding-bottom: 0.5rem;
+    justify-content: center;
+} 
+li {
+    margin: 0px 10px;
+}
+
+.button-nav{
+    font-family: 'Ibarra Real Nova', serif;
+    font-weight: 600;
+    color: black;
+    font-size: 12pt;
+    border: none;
+    background-color: white;
+}
+
+.button-nav :hover{
+    font-family: 'Ibarra Real Nova', serif;
+    font-weight: 600;
+    color: rgb(114, 112, 112);
+    font-size: 12pt;
+}
+
+.active{
+    background-color: black;
+    font-family: 'Ibarra Real Nova', serif;
+    font-weight: 600;
+    color: white;
+    border-radius: 10%;
+    border-color: black;
+    padding: 0.5rem;
+    font-size: 12pt;
+}
+        
+.logo{
+padding-top: 1rem;
+padding-bottom: 2rem;
+}
+
