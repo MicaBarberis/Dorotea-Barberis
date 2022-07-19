@@ -25,6 +25,7 @@ li {
     color: black;
     font-size: 12pt;
     border: none;
+    padding: 0.5rem;
     background-color: white;
 }
 
@@ -47,7 +48,6 @@ li {
 }
         
 .logo{
-padding-top: 1rem;
-padding-bottom: 2rem;
+    padding-top: 1rem;
+    padding-bottom: 2rem;
 }
-

@@ -1,0 +1,6 @@
+.cart-widget{
+    margin-left: 10rem;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
