@@ -1,13 +1,16 @@
 .item-product {
     float: left;
-    width: 20% ;
+    width: calc(20% - 8px);
     box-shadow: 1px 1px 5px #afafaf47;
     border: 10px;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     text-align: center;
+    position: relative;
     margin-left: 10px;
+    margin-bottom: 10px;
 }
 
 .img-product{

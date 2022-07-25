@@ -1,21 +1,9 @@
-import { useState, useEffect } from 'react'
+import products from '../../utils/products.mock'
+import ItemCount from '../ItemCount/ItemCount'
 import './ItemProduct.css'
 
-const ItemProduct = ({data, action}) => {
-    const [contador, setContador] = useState(1)
-    
-    const {title, image, price} = data
-
-    const addNumber = () => {
-        setContador(contador + 1)
-    }
-    const removeNumber = () => {
-        setContador(contador - 1)
-    }
-
-useEffect(() => {
-    console.log("Actualización")
-}, [contador])
+const ItemProduct = ({data, action}) => {    
+    const {title, image, price, stock} = data
 
 
     return (
@@ -23,11 +11,7 @@ useEffect(() => {
             <img className='img-product' src={`/assets/productos/${image}`} alt="Imagen producto" />
             <p>{title}</p>
             <span>$ {price}</span>
-            <div className='countProd'>
-                <button onClick={removeNumber}>-</button>
-                <p>{contador}</p>
-                <button onClick={addNumber}>+</button>
-            </div>
+            <ItemCount stock={stock}/>
             <button onClick={action}>Añadir al carrito</button>
         </div>
     )
