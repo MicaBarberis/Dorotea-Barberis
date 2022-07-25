@@ -1,6 +1,6 @@
 .item-product {
     float: left;
-    width: 33.33%;
+    width: 20% ;
     box-shadow: 1px 1px 5px #afafaf47;
     border: 10px;
     display: flex;
@@ -13,3 +13,19 @@
 .img-product{
     width: 50%;
 }
+
+.countProd{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+.countProd p {
+    font-size: 22px;
+}
+.countProd button {
+    padding: 10px;
+    font-size: 27px;
+    margin: 10px;
+}
+
