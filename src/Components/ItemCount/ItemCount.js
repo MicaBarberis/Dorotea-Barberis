@@ -11,6 +11,11 @@ const ItemCount = ({stock}) => {
         setContador(contador - 1); 
     }
 
+    /*NO SE COMO HACER PARA QUE EL CONTADOR NO SEA EN NUMEROS NEGATIVOS! HICE ASI PERO SE QUE ESTÁ MAL PORQUE NO FUNCIONA JAJA*/
+    if(setContador < 0){
+        setContador (contador=0)
+    }
+
     useEffect(() => {
         console.log("Actualización")
     }, [contador])
