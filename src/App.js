@@ -1,16 +1,30 @@
 import './App.css';
 import NavBar from './Components/NavBar/NavBar';
-import ItemListContainer from './Components/ItemListContainer/ItemListContainer';
+import {BrowserRouter, Routes, Route} from 'react-router-dom'
+import Home from './pages/Home'
+import Products from './pages/Products'
+import Contact from './pages/Contact'
+import aboutUs from './pages/AboutUs';
+import Detail from './pages/Detail'
+
+
 
 function App() {
   return (
     
-    <div className="container">
+    <BrowserRouter>
+
       <NavBar />
-   <div className='products-container'>
-      <ItemListContainer section="Todos los productos" />
-   </div>
-    </div>
+      <Routes>
+        <Route path="/" element={<Home/>}/>
+        <Route path='productos' element={<Products/>} />
+        <Route path='/productos/:id' element={<Detail/>} />
+        <Route path='contacto' element= {<Contact/>} />
+        <Route path='sobrenosotros' element= {<aboutUs/>} />
+        <Route path='*' element={<h1>Error 404. Pagína no encontrada</h1>}/>
+      </Routes>
+
+    </BrowserRouter>
   );
 }
 

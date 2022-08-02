@@ -5,6 +5,7 @@ const ItemList = ({dataProducts}) => {
         <>
             {dataProducts.map( (product) => {
                 return <ItemProduct key={product.id} data={product}/>
+                
             })}
         </>
     )

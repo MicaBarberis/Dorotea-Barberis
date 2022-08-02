@@ -7,7 +7,8 @@ const ItemListContainer = ({section}) =>{
 
     const [listProducts, setListProducts] = useState ([])
 
-    const getProducts = new Promise ( (resolve, reject) => {
+    /* Desafío 5 */
+    const getProducts = new Promise ( (resolve) => {
         setTimeout( () => {
             resolve (products)
         }, 2000)

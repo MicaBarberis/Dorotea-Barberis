@@ -8,7 +8,9 @@ const ItemCount = ({stock}) => {
         setContador(contador + 1);
     }
     const removeNumber = () => {
-        setContador(contador - 1); 
+        if(contador > 1) {
+            setContador(contador - 1); 
+         }
     }
 
     /*NO SE COMO HACER PARA QUE EL CONTADOR NO SEA EN NUMEROS NEGATIVOS! HICE ASI PERO SE QUE ESTÁ MAL PORQUE NO FUNCIONA JAJA*/

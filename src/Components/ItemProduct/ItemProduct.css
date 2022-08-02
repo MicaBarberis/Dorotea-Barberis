@@ -1,8 +1,14 @@
+p{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 16px;
+    color: black;
+    font-weight: 600;
+}
+
 .item-product {
-    float: left;
+    float:left;
     width: calc(20% - 8px);
     box-shadow: 1px 1px 5px #afafaf47;
-    border: 10px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -24,11 +30,11 @@
     align-items: center;
 }
 .countProd p {
-    font-size: 22px;
+    font-size: 16px;
 }
 .countProd button {
-    padding: 10px;
-    font-size: 27px;
-    margin: 10px;
+    padding: 8px;
+    font-size: 20px;
+    margin: 8px;
 }
 
