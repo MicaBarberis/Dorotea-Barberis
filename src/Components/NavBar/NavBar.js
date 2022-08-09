@@ -5,14 +5,20 @@ import { Link } from 'react-router-dom'
 const NavBar = () => {
     return (
         <div className='navbar-primary'>
-            <img className='logo' src='/assets/logo.png' alt='logo'/>
+            <nav>
+            <Link to="/" className="brand-logo">  <img className='logo' src='/assets/logo.png' alt='logo'/></Link>
             <ul>
-                <Link to="/"><li><button className='button-nav'>Inicio</button></li></Link>
-                <Link to="productos"><li><button className='button-nav'>Productos</button></li></Link>
-                <Link to="contacto"><li><button className='button-nav'>Contacto</button></li></Link>
-                <Link to="sobrenosotros"><li><button className='button-nav'>Sobre nosotros</button></li></Link>
+            <li><Link to="/">Inicio</Link></li>
+            <li><Link to="productos">Productos</Link></li>
+            <li><Link to="productos/Body">Body</Link></li>
+            <li><Link to="productos/Conjuntos">Conjuntos</Link></li>
+            <li><Link to="productos/Inferior">Inferior</Link></li>
+            <li><Link to="productos/Corpiños">Corpiños</Link></li>
+            <li><Link to="contacto">Contacto</Link></li>
+            <li><Link to="sobrenosotros"></Link></li>
                 <CartWidget />
             </ul>
+            </nav>
         </div>
     )
 }
