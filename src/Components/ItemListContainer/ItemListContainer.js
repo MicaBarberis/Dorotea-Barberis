@@ -11,7 +11,6 @@ const ItemListContainer = ({section}) =>{
 
     const filterCategory = products.filter((products) => products.category === categoryName)
 
-    /* Desafío 5 */
     const getProducts = new Promise ( (resolve) => {
         setTimeout( () => {
             if (categoryName) {
@@ -22,7 +21,23 @@ const ItemListContainer = ({section}) =>{
             }
         }, 2000)
     })
+/*     const getProducts = new Promise( (resolve, reject) => {
+        setTimeout( () => {
+            resolve(products)
+        }, 2000)
+    })
 
+    useEffect (() => {
+        getProducts
+        .then ((res) => {
+            setListProducts(res)
+        })
+        .catch( (error) => { 
+            console.log("falló")
+        })
+        .finally( () => { 
+        })
+}, []) */
 
 useEffect (() => {
     const getProduct = async () => {
@@ -39,7 +54,7 @@ useEffect (() => {
 
     return (
         <div className='list-products'>
-            <h2>Listado de productos</h2>
+            <h2>{section} </h2>
             <section className='main-container list-products'>
             <ItemList dataProducts={listProducts}/>
             </section>

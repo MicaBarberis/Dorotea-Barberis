@@ -1,10 +1,30 @@
 import { useState, useContext } from "react"
-import { CartContext } from "../Context/CartContext";
+import { CartContext } from "../../Context/CartContext";
 
+/* const ItemCount = ({stock, quantitySelected, productData}) => {
+    const { addProductToCart } = useContext(CartContext)
+    const [ contador, setContador ] = useState(0);
+
+    const onAdd=(contador) => {
+        quantitySelected(contador);
+        addProductToCart(productData, contador)
+    }
+
+    const addQuantity = () => {
+        if( contador < stock ) {
+            setContador(contador + 1);
+        } 
+    }
+
+    const removeQuantity = () => {
+        if( contador > 0 ) {
+            setContador(contador - 1);
+        }
+    } */
 const ItemCount = ({stock, setQuantitySelected, productData}) => {
     const {addProductToCart} = useContext(CartContext)
     
-    const [countQuantity, setCountQuantity] = useState(0)
+    const [countQuantity, setCountQuantity] = useState(1)
 
 
     const addQuantity = () => {
@@ -21,7 +41,7 @@ const ItemCount = ({stock, setQuantitySelected, productData}) => {
 
     const onAdd = (countQuantity) => {
         console.log ("Agregar al carrito", productData)
-        addProductToCart(productData, countQuantity)
+        addProductToCart(productData)
         setQuantitySelected (countQuantity)
 
     }
@@ -29,11 +49,11 @@ const ItemCount = ({stock, setQuantitySelected, productData}) => {
     return(
         <>
             <div className="container-count">
-                <button onClick={removeQuantity} disabled={countQuantity === 0}>-</button>
+                <button onClick={removeQuantity}>-</button>
                 <span>{countQuantity}</span>
-                <button onClick={addQuantity} disabled= {stock === countQuantity}>+</button>
+                <button onClick={addQuantity}>+</button>
             </div>
-            <button className="btn-agregar-cart" onClick={() => onAdd (countQuantity)} disabled={stock === 0} >AGREGAR AL CARRITO</button>
+            <button className="btn-agregar-cart" onClick={onAdd}>AGREGAR AL CARRITO</button>
             <div className="card-stock"> Stock disponible: <b>{stock}</b></div>
         </>
         )

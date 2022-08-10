@@ -5,6 +5,7 @@ const products = [
     price: 4500,
     image: 'product5.jpg',
     stock: 3,
+    category: 'body'
 },
 
 {
@@ -13,6 +14,7 @@ const products = [
     price: 4280,
     image: 'producto21.jpg',
     stock: 2,
+    category: 'body'
 },
 
 {
@@ -21,6 +23,7 @@ const products = [
     price: 3990,
     image: 'producto13.jpg',
     stock: 6,
+    category: 'body'
 },
 
 {
@@ -29,6 +32,7 @@ const products = [
     price: 5990,
     image: 'producto1.jpg',
     stock: 2,
+    category: 'body'
 },
 
 {
@@ -37,6 +41,7 @@ const products = [
     price: 5500,
     image: 'producto4.jpg',
     stock: 3,
+    category: 'body'
 },
 
 {
@@ -45,6 +50,7 @@ const products = [
     price: 6500,
     image: 'producto12.jpg',
     stock: 1,
+    category: 'body'
 },
 ]
 

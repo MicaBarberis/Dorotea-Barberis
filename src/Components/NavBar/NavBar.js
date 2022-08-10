@@ -10,14 +10,10 @@ const NavBar = () => {
             <ul>
             <li><Link to="/">Inicio</Link></li>
             <li><Link to="productos">Productos</Link></li>
-            <li><Link to="productos/Body">Body</Link></li>
-            <li><Link to="productos/Conjuntos">Conjuntos</Link></li>
-            <li><Link to="productos/Inferior">Inferior</Link></li>
-            <li><Link to="productos/Corpiños">Corpiños</Link></li>
             <li><Link to="contacto">Contacto</Link></li>
-            <li><Link to="sobrenosotros"></Link></li>
-                <CartWidget />
             </ul>
+                <CartWidget />
+
             </nav>
         </div>
     )

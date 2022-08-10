@@ -1,5 +1,5 @@
 import { useContext } from 'react'
-import { CartContext } from '../Context/CartContext';
+import { CartContext } from '../../Context/CartContext';
 /* import products from '../../utils/products.mock'; */
 import './CartListItem.css';
 
@@ -9,7 +9,7 @@ const CartListItem = () => {
 
     return (
         <div>
-        <p className='card-stock'>Tienes <b>{ cartProducts.length }</b> Productos en tu carro de compras. </p>
+        <p className='card-stock'>Tienes <b>{ cartProducts.length }</b> productos en tu carro de compras. </p>
 
     { cartProducts.length > 0 && 
         cartProducts.map((product) => {

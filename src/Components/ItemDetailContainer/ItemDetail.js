@@ -3,15 +3,45 @@ import './ItemDetail.css'
 import { useState } from "react"
 import { Link } from 'react-router-dom'
 
-const ItemDetail = ({dataProducts}) => {
-    const {title, price, image, stock} = dataProducts
+const ItemDetail = ({data, setShowModal}) => {
     const [quantitySelected, setQuantitySelected] = useState(0)
+    return(
+        <>
+        <div className="item-detail-image">
+            <img src={`/assets/productos/${data.image}`} alt="imagen" onClick={() => setShowModal(true)}/>
+        </div>
+        <div className="item-detail-info">
+            <span className="category">Body</span>
+            <h2>{data.title}</h2>   
+            <span className="detail-info__price">$ {data.price}</span>
+            <span>Talles</span>
+        <div className="detail-info__size">
+                    <button>XXL</button>
+                    <button>XL</button>
+                    <button>L</button>
+        </div>
+            {console.log("quantitySelected: ", quantitySelected)}
+                
+
+            { quantitySelected > 0 ? <button><Link to="/cart" >Finalizar compra</Link></button> : <ItemCount setQuantitySelected={setQuantitySelected} productData={data} /> }
+
+        </div>
+        </>
+
+    )
+}
+
+
+
+/* const ItemDetail = ({dataProducts}) => {
+    const {title, price, image, stock} = dataProducts
+    const [quantitySelected, setQuantitySelected] = useState(0) */
 
     /* const addToCart = (e) => {
         e.stopPropagation()
     } */
 
-    return (
+/*     return (
         <div className='row width-container'>
             <div className="col s6">
                     <img src={`/assets/${image}`} alt="Producto 1" />
@@ -41,30 +71,8 @@ const ItemDetail = ({dataProducts}) => {
             </div>
         </div>  
     )
-}
-{/*                <div className="item-detail-image">
-            <img src={`/assets/productos/${data.image}`} alt="imagen" />
-        </div>
-        <div className="item-detail-info">
-            <span className="category">Body</span>
-            <p>{data.title}</p>   
-            <span className="detail-info__price">$ {data.price}</span>
-            <span>Talles</span>
-        <div className="detail-info__size">
-                    <button>XXL</button>
-                    <button>XL</button>
-                    <button>L</button>
-        </div>
-            {console.log("quantitySelected: ", quantitySelected)}
-                
+} */
 
-            { quantitySelected > 0 ? <button><Link to="/cart" >Finalizar compra</Link></button> : <ItemCount setQuantitySelected={setQuantitySelected} productData={data} /> }
-
-        </div>
-
-    )
-}
- */}
 
 
 export default ItemDetail
