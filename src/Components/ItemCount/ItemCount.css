@@ -1,0 +1,29 @@
+.container-count > button{
+    border-radius: 10px;
+    text-align: center;
+    font-size: 14pt;
+    border-color:rgb(158, 154, 154);
+    cursor: pointer;
+}
+
+.container-count{
+    margin-left: 50px;
+}
+
+.btn-agregar-cart{
+    text-decoration: none;
+    border-radius: 10px;
+    background-color: black;
+    padding: 8px;
+    color: white;
+    border: none ;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    margin-left: 50px;
+}
+
+.card-stock{
+    font-size: 12pt;
+    margin-left: 120px;
+}

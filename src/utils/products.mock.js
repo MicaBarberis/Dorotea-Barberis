@@ -5,7 +5,7 @@ const products = [
     price: 4500,
     image: 'product5.jpg',
     stock: 3,
-    category: 'body'
+    category: 'Body'
 },
 
 {
@@ -14,7 +14,7 @@ const products = [
     price: 4280,
     image: 'producto21.jpg',
     stock: 2,
-    category: 'body'
+    category: 'Body'
 },
 
 {
@@ -23,7 +23,7 @@ const products = [
     price: 3990,
     image: 'producto13.jpg',
     stock: 6,
-    category: 'body'
+    category: 'Body'
 },
 
 {
@@ -32,7 +32,7 @@ const products = [
     price: 5990,
     image: 'producto1.jpg',
     stock: 2,
-    category: 'body'
+    category: 'Body'
 },
 
 {
@@ -41,7 +41,7 @@ const products = [
     price: 5500,
     image: 'producto4.jpg',
     stock: 3,
-    category: 'body'
+    category: 'Body'
 },
 
 {
@@ -50,106 +50,106 @@ const products = [
     price: 6500,
     image: 'producto12.jpg',
     stock: 1,
-    category: 'body'
+    category: 'Body'
 },
 
 {
     id: 7,
-    title: "corpiño encaje azul",
+    title: "Corpiño encaje azul",
     price: 4500,
     image: 'producto13.jpeg',
     stock: 4,
-    category: 'corpiño'
+    category: 'Corpiño'
 },
 
 {
     id: 8,
-    title: "conjunto combinado",
+    title: "Conjunto combinado",
     price: 7500,
     image: 'producto14.jpg',
     stock: 3,
-    category: 'conjunto'
+    category: 'Conjunto'
 },
 
 {
     id: 9,
-    title: "conjunto algodón",
+    title: "Conjunto algodón",
     price: 5500,
     image: 'producto15.jpg',
     stock: 2,
-    category: 'conjunto'
+    category: 'Conjunto'
 },
 
 {
     id: 10,
-    title: "conjunto transparencia",
+    title: "Conjunto transparencia",
     price: 7500,
     image: 'producto16.jpg',
     stock: 1,
-    category: 'conjunto'
+    category: 'Conjunto'
 },
 
 {
     id: 11,
-    title: "conjunto con portaligas",
+    title: "Conjunto con portaligas",
     price: 8500,
     image: 'producto17.jpg',
     stock: 3,
-    category: 'conjunto'
+    category: 'Conjunto'
 },
 
 {
     id: 12,
-    title: "conjunto push",
+    title: "Conjunto push",
     price: 7900,
     image: 'producto18.jpg',
     stock: 2,
-    category: 'conjunto'
+    category: 'Conjunto'
 },
 
 {
     id: 13,
-    title: "conjunto microfibra",
+    title: "Conjunto microfibra",
     price: 5900,
     image: 'producto19.jpg',
     stock: 3,
-    category: 'conjunto'
+    category: 'Conjunto'
 },
 
 {
     id: 14,
-    title: "corpiño Exquissite",
+    title: "Corpiño Exquissite",
     price: 5500,
     image: 'producto20.jpg',
     stock: 1,
-    category: 'corpiño'
+    category: 'Corpiño'
 },
 
 {
     id: 15,
-    title: "corpiño Diva",
+    title: "Corpiño Diva",
     price: 4500,
     image: 'producto22.jpg',
     stock: 2,
-    category: 'corpiño'
+    category: 'Corpiño'
 },
 
 {
     id: 16,
-    title: "bombacha Modelante ",
+    title: "Bombacha Modelante ",
     price: 2500,
     image: 'producto23.jpg',
     stock: 4,
-    category: 'bombacha'
+    category: 'Bombacha'
 },
 
 {
     id: 17,
-    title: "bombacha Cocota",
+    title: "Bombacha Cocota",
     price: 2390,
     image: 'producto24.jpg',
     stock: 6,
-    category: 'bombacha'
+    category: 'Bombacha'
 },
 ]
 

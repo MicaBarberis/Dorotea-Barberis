@@ -7,15 +7,17 @@ const ItemDetail = ({data, setShowModal}) => {
     const [quantitySelected, setQuantitySelected] = useState(0)
     return(
         <>
-        <div className="item-detail-image">
-            <img src={`/assets/productos/${data.image}`} alt="imagen" onClick={() => setShowModal(true)}/>
+        <div className="product-detail">
+        <span className="category">{data.category} </span>
+        <div className="item-detail">
+            <img className="item-detail-image" src={`/assets/productos/${data.image}`} alt="imagen" onClick={() => setShowModal(true)}/>
         </div>
         <div className="item-detail-info">
-            <span className="category">Body</span>
+
             <h2>{data.title}</h2>   
-            <span className="detail-info__price">$ {data.price}</span>
+            <div><span className="detail-info-price">$ {data.price}</span></div>
+            <div className="detail-info-size">
             <span>Talles</span>
-        <div className="detail-info__size">
                     <button>XXL</button>
                     <button>XL</button>
                     <button>L</button>
@@ -29,52 +31,12 @@ const ItemDetail = ({data, setShowModal}) => {
             <ItemCount setQuantitySelected={setQuantitySelected} stock={data.stock} productData={data} /> }
 
         </div>
+        </div>
         </>
 
     )
 }
 
-
-
-/* const ItemDetail = ({dataProducts}) => {
-    const {title, price, image, stock} = dataProducts
-    const [quantitySelected, setQuantitySelected] = useState(0) */
-
-    /* const addToCart = (e) => {
-        e.stopPropagation()
-    } */
-
-/*     return (
-        <div className='row width-container'>
-            <div className="col s6">
-                    <img src={`/assets/${image}`} alt="Producto 1" />
-            </div>
-
-            <div className="col s6">
-                <div className="card">
-                    <div className="card-content left-align">
-                        <div className="card-title"><h3>{title}</h3></div>
-
-                        <div className="card-price red darken-4"><h5>$ {price}</h5></div>
-
-                        <div className="card-description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</div>
-
-                        {
-                            quantitySelected > 0
-                            ? 
-                            <div className="card-action">
-                                <Link to="/Cart"><button className="btn waves-effect waves-light">Finalizar compra</button></Link>
-                            </div> 
-                            : 
-                            <ItemCount stock={stock} quantitySelected={setQuantitySelected} productData={dataProducts}></ItemCount>
-                        }
-                        
-                    </div>
-                </div>
-            </div>
-        </div>  
-    )
-} */
 
 
 

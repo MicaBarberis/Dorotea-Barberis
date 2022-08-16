@@ -6,11 +6,11 @@ const NavBar = () => {
     return (
         <div className='navbar-primary'>
             <nav>
-            <Link to="/" className="brand-logo">  <img className='logo' src='/assets/logo.png' alt='logo'/></Link>
-            <ul>
-            <li><Link to="/">Inicio</Link></li>
-            <li><Link to="productos">Productos</Link></li>
-            <li><Link to="contacto">Contacto</Link></li>
+            <Link to="/" className="brand-logo"><img className='logo' src='/assets/logo.png' alt='logo'/></Link>
+            <ul className='text-navbar'>
+            <li className='text'><Link to="/"><button>Inicio</button></Link></li>
+            <li className='text'><Link to="productos"><button>Productos</button></Link></li>
+            <li className='text'><Link to="contacto"><button>Contacto</button></Link></li>
             </ul>
                 <CartWidget />
 
