@@ -11,14 +11,13 @@ const CartListItem = () => {
         <div>
         <p className='card-stock'>Tienes <b>{ cartProducts.length }</b> productos en tu carro de compras. </p>
 
-    { cartProducts.length > 0 && 
-        cartProducts.map((product) => {
+    { cartProducts.map((product) => {
             return(
                 <div className="row">
                     <div className="col s12 padding-0" key={product.id}>
                         <div className="card horizontal">
                             <div className="card-image">
-                                <img src={`/assets/${product.image}`} alt="" />
+                                <img src={`/assets/productos/${product.image}`} alt="no hay imágen" />
                             </div>
                             <div className="card-stacked">
                                 <div className="card-block">

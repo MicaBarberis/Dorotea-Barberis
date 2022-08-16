@@ -19,13 +19,13 @@ const ItemListContainer = ({section}) =>{
             else {
                 resolve(products)
             }
-        }, 2000)
+        }, 1000)
     })
 /*     const getProducts = new Promise( (resolve, reject) => {
         setTimeout( () => {
             resolve(products)
         }, 2000)
-    })
+    })*/
 
     useEffect (() => {
         getProducts
@@ -35,21 +35,8 @@ const ItemListContainer = ({section}) =>{
         .catch( (error) => { 
             console.log("falló")
         })
-        .finally( () => { 
-        })
-}, []) */
+}, []) 
 
-useEffect (() => {
-    const getProduct = async () => {
-        try{
-        const responseLog = await getProducts()
-        setListProducts(responseLog)
-    }
-
-    catch(error){ console.log(error) }
-}
-    getProduct()
-}, )
 
 
     return (

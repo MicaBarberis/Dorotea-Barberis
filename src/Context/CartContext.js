@@ -7,20 +7,26 @@ const CartProvider = ({children}) => {
     const [totalProducts, setTotalProducts] = useState(0)
 
 
-    const addProductToCart = (product) => {
+    const addProductToCart = (product, counter) => {
         const isProductInCart = cartProducts.find((cartItem) => cartItem.id === product.id)
             if(isProductInCart) {
-                setTotalProducts(totalProducts + 1)
-                return setCartProducts(cartProducts => [...cartProducts, product])
+                if(isProductInCart.countQuantity + counter > isProductInCart.stock)
+                return false
+                isProductInCart.countQuantity += counter
+            } else {
+                product.countQuantity = counter;
+                setCartProducts([...cartProducts, product])
             }
+            setTotalProducts(totalProducts + counter)
     }
 
     const clearAll = () => {
         setCartProducts([])
     }
 
-    const clearProduct = ( product) => {
-        setCartProducts(cartProducts.filter( (cartProduct) => cartProduct.id !== product.id) )
+    const clearProduct = (id) => {
+        const result = cartProducts.filter(el => el.id !== parseInt(id))
+        setCartProducts(result)
     }
 
     const data = {

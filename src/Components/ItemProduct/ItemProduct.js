@@ -1,19 +1,19 @@
-import { useState, useEffect, useContext } from 'react'
+
 import { Link } from 'react-router-dom'
-import products from '../../utils/products.mock'
+
 import { CartContext } from '../../Context/CartContext'
 import './ItemProduct.css'
 import ItemCount from '../ItemCount/ItemCount'
 
 const ItemProduct = ({data, action}) => {    
-    const {handleClick, name} = useContext(CartContext)
+/*     const {handleClick, name} = useContext(CartContext)
 
-        const [contador, setContador] = useState(1);
+        const [contador, setContador] = useState(1); */
 
         const {title, image, price, stock, id} = data
 
     
-    const addNumber = () => {
+/*     const addNumber = () => {
         if(stock > contador)
         setContador(contador + 1);
     }
@@ -33,7 +33,7 @@ const ItemProduct = ({data, action}) => {
     const addToCart = (e) => {
         e.preventDefault()
     }
-
+ */
     return (
         <div className='item-product'>
         <Link to={`/productos/${id}`} >
@@ -41,8 +41,6 @@ const ItemProduct = ({data, action}) => {
             <p>{title}</p>
             <span>$ {price}</span>
         </Link>
-            <ItemCount stock={stock}/>
-            <button onClick={addToCart}>Añadir al carrito</button>
         </div>
 
     )

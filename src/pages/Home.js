@@ -5,10 +5,10 @@ const Home = () => {
             <div>
                 <h1>Inicio</h1>
                 <ul>
-                    <li><Link to="/category/Remeras">Body</Link></li>
-                    <li><Link to="/category/Abrigo">Conjuntos</Link></li>
-                    <li><Link to="/category/Pantalones">Corpiños</Link></li>
-                    <li><Link to="/category/Accesorios">Bombachas</Link></li>
+                    <li><Link to="/category/body">Body</Link></li>
+                    <li><Link to="/category/conjunto">Conjuntos</Link></li>
+                    <li><Link to="/category/corpiño">Corpiños</Link></li>
+                    <li><Link to="/category/bombacha">Bombachas</Link></li>
                 </ul>
             </div>
     )

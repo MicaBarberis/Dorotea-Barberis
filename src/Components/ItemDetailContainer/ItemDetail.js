@@ -23,7 +23,10 @@ const ItemDetail = ({data, setShowModal}) => {
             {console.log("quantitySelected: ", quantitySelected)}
                 
 
-            { quantitySelected > 0 ? <button><Link to="/cart" >Finalizar compra</Link></button> : <ItemCount setQuantitySelected={setQuantitySelected} productData={data} /> }
+            { quantitySelected != 0 ?
+             <Link to="/cart" ><button className="button">Finalizar compra</button></Link>
+             : 
+            <ItemCount setQuantitySelected={setQuantitySelected} stock={data.stock} productData={data} /> }
 
         </div>
         </>

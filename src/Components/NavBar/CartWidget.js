@@ -13,7 +13,7 @@ const CartWidget = () => {
             <li className='icon-nav'>
                 <Link to="/cart">
                     <div className="qty-display">{cartProducts.length}</div>
-            <i className="cart-logo"><img src='assets/cart-logo.png'/></i>
+            <i className="cart-logo"><img src='assets/cart-logo.png' alt='No hay imágen'/></i>
             </Link>
             </li>
             </div>      
