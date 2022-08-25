@@ -1,10 +1,50 @@
-import { useContext } from 'react'
+import { useContext, useState } from 'react'
 import { CartContext } from '../../Context/CartContext';
 import './CartListItem.css';
+import Modal from '../Modal/Modal';
+import db from '../../firebaseConfig.js'
+import {collection, addDoc} from 'firebase/firestore'
 
 const CartListItem = () => {
-    const { cartProducts, clearAll, clearProduct } = useContext(CartContext)
-    console.log (cartProducts)
+    const [showModal, setShowModal] = useState (false)
+    const { cartProducts, clearAll, clearProduct, totalPrice } = useContext(CartContext)
+    const [succes, setSucces] = useState ()
+
+    const [order, setOrder] = useState({
+        items: cartProducts.map((product) =>{
+            return {
+                id: product.id,
+                title: product.title,
+                price: product.price
+            }
+        }),
+        buyer: {},
+        total: totalPrice
+    })
+    const [formData, setFormData] = useState ({
+        name:'',
+        phone: '',
+        email: ''
+    })
+
+
+
+    const handleChange = (e) => {
+        setFormData({...formData, [e.target.name] : e.target.value})
+    }
+
+    const submitData = (e) => {
+        e.preventDefault()
+        console.log("order para enviar: ", {...order, buyer: formData})
+        pushData({...order, buyer: formData})
+    }
+    const pushData = async (newOrder) => {
+        const collectionOrder = collection(db, 'órdenes')
+        const orderDoc = await addDoc(collectionOrder, newOrder)
+        setSucces(orderDoc.id)
+        console.log('ÓRDEN GENERADA', orderDoc)
+    }
+
 
     return (
         <div>
@@ -50,8 +90,29 @@ const CartListItem = () => {
         <div className="total-compra">
            <p> Total final: <b>Pendiente</b> </p>
         </div>
+        <div className='pagar'>
+            <button onClick={() => setShowModal(true)}>Ir a pagar</button>
+        </div>
     </div>
-    
+        {showModal &&  
+        <Modal title="DATOS DE CONTACTO" close={() => setShowModal()} >
+            {succes ? (
+                <>
+                <h2>Su órden se generó correctamente</h2>
+                <p>Id de compra: {succes} </p>
+                </>
+            ) : (
+            <form onSubmit={submitData}>
+                <input type="text" name="name" placeholder='Nombre' onChange={handleChange} value={formData.name}/>
+                <input type="number" name="phone" placeholder='Teléfono' onChange={handleChange} value={formData.phone}/>
+                <input type="text" name="email" placeholder='Email' onChange={handleChange} value={formData.email}/>
+
+                <button type='Submit'>Enviar</button>
+            </form>
+            )}
+            
+        </Modal>
+        }
 </div>
 )
 }

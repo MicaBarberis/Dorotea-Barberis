@@ -1,0 +1,39 @@
+.modal-custom {
+    top:  100px;
+    z-index: 999;
+    display: block;
+    width: 45%;
+    background-color: white;
+}
+.modal-content {
+    position: relative;
+}
+.modal-content::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            height: 5px;
+            width: 100%;
+    background: linear-gradient(to right, #b71c1b 0%, #b71c1b 25%, #34a69a 25%, #34a69a 50%, #b71c1b 50%, #b71c1b 75%, #34a69a 75%, #34a69a 100%);
+    }
+
+
+.modal-content { padding: 30px; }
+
+.close-modal {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    background: transparent;
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+    color: #34a599;
+}
+
+.close-modal:hover:focus:active {
+    background-color: transparent;
+    color: #039be5;
+    }
+

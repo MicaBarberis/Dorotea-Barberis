@@ -5,7 +5,7 @@ const CartContext = createContext ()
 const CartProvider = ({children}) => {
     const [cartProducts, setCartProducts] = useState ([])
     const [totalProducts, setTotalProducts] = useState(0)
-
+    const [totalPrice, setTotalPrice] = useState(0)
 
     const addProductToCart = (product, counter) => {
         const isProductInCart = cartProducts.find((cartItem) => cartItem.id === product.id)
@@ -18,6 +18,7 @@ const CartProvider = ({children}) => {
                 setCartProducts([...cartProducts, product])
             }
             setTotalProducts(totalProducts + counter)
+            setTotalPrice(totalPrice + product.price)
     }
 
     const clearAll = () => {
@@ -35,7 +36,8 @@ const CartProvider = ({children}) => {
         clearProduct,
         clearAll,
         addProductToCart,
-        totalProducts
+        totalProducts,
+        totalPrice
     } 
 
     return (

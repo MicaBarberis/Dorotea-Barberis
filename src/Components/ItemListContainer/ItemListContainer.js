@@ -40,6 +40,7 @@ const ItemListContainer = ({section}) =>{
 
 
     useEffect (() => {
+        
         getProducts()
         .then((res) => {
             setListProducts(res)
