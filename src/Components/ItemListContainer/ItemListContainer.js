@@ -27,17 +27,6 @@ const ItemListContainer = ({section}) =>{
         return productList
     }
 
-/*     const getProducts = new Promise ( (resolve) => {
-        setTimeout( () => {
-            if (categoryName) {
-                resolve (filterCategory)
-            }
-            else {
-                resolve(products)
-            }
-        }, 1000)
-    }) */
-
 
     useEffect (() => {
         
@@ -45,13 +34,6 @@ const ItemListContainer = ({section}) =>{
         .then((res) => {
             setListProducts(res)
         })
-/*         getProducts
-        .then ((res) => {
-            setListProducts(res)
-        })
-        .catch( (error) => { 
-            console.log("falló")
-        }) */
 }, []) 
 
 

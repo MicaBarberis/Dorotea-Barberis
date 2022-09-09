@@ -87,9 +87,6 @@ const CartListItem = () => {
                 <button className='btn waves-effect waves-light' onClick={() => clearAll()}>Borrar todo</button>
             </div>
         </div>
-        <div className="total-compra">
-           <p> Total final: <b>Pendiente</b> </p>
-        </div>
         <div className='pagar'>
             <button onClick={() => setShowModal(true)}>Ir a pagar</button>
         </div>
